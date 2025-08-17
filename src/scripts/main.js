@@ -23,13 +23,13 @@ const tree = document.querySelector('#tree');
 function createTree(element, data) {
   const ul = document.createElement('ul');
 
-  for (const key in data) {
+  for (const product in data) {
     const li = document.createElement('li');
 
-    li.textContent = key;
+    li.textContent = product;
 
-    if (Object.keys(data).length > 0) {
-      createTree(li, data[key]);
+    if (Object.keys(data[product]).length > 0) {
+      createTree(li, data[product]);
     }
 
     ul.appendChild(li);
